@@ -86,7 +86,7 @@ public partial class MainWindow : Window
     private void StartSlideShow()
     {
         timer = new DispatcherTimer();
-        timer.Interval = TimeSpan.FromMicroseconds(0.5);
+        timer.Interval = TimeSpan.FromMilliseconds(20);
         timer.Tick += onTimerTick;
         timer.Start();
     }

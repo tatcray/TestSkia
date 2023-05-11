@@ -106,7 +106,7 @@ public partial class SkiaBitMapWindow : Window
         // В этом примере мы будем использовать простой DispatcherTimer для эмуляции цикла
 
         var timer = new Avalonia.Threading.DispatcherTimer();
-        timer.Interval = System.TimeSpan.FromMicroseconds(0.5);
+        timer.Interval = System.TimeSpan.FromMilliseconds(20);
         timer.Tick += (sender, e) =>
         {
             // Отобразить следующее изображение в Canvas
