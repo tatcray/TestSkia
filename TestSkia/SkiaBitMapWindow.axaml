@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:testSkia="clr-namespace:TestSkia"
+        Height="580"
+        Width="520"
+        x:Class="TestSkia.SkiaBitMapWindow"
+        Title="SkiaBitMap Test">
+	<Window.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="FontSize" Value="24"/>
+			<Setter Property="FontStyle" Value="Normal"/>
+			<Setter Property="FontWeight" Value="600"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="Open Sans"/>
+			<Setter Property="Foreground" Value="#FB56B9"/>
+		</Style>
+	</Window.Styles>
+	<StackPanel Orientation="Vertical"
+	            Margin="10"
+	            HorizontalAlignment="Left">
+		<TextBlock x:Name="FpsDisplay"/>
+		<Canvas
+			x:Name="Canvas" Margin="0 10 0 0"/>
+	</StackPanel>
+</Window>

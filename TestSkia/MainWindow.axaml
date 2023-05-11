@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:testSkia="clr-namespace:TestSkia"
+        Height="620"
+        Width="520"
+        x:Class="TestSkia.MainWindow"
+        Title="Without SkiaBitMap">
+    <Design.DataContext>
+        <testSkia:MainWindowViewModel/>
+    </Design.DataContext>
+    <Window.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontWeight" Value="600"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Open Sans"/>
+            <Setter Property="Foreground" Value="#FB56B9"/>
+        </Style>
+        <Style Selector="TextBlock.ButtonSendText">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Styles>
+    <StackPanel Orientation="Vertical"
+                Margin="10"
+                HorizontalAlignment="Left">
+        <TextBlock Margin="-86 0 0 0" x:Name="FpsDisplay"/>
+        <Canvas
+            x:Name="MyCanvas" Margin="0 10 0 0">
+        </Canvas>
+        <Button Background="#7BB8FD"
+                Margin="0 510 0  10"
+                Click="OnButtonClicked"
+                Width="180"
+                Height="44"
+                BorderBrush="#477DBC">
+            <TextBlock Text="Попробывать Skia)"
+                       Classes="ButtonSendText"/>
+        </Button>
+    </StackPanel>
+</Window>
